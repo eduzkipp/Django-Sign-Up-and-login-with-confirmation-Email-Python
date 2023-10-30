@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-MEDIA_URL='/media'
+MEDIA_URL='/media/'
 
 LOGIN_REDIRECT_URL="index"
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
@@ -131,7 +132,7 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 
 EMAIL_HOST="eduzkipp@gmail.com"
-EMAIL_HOST_PASSWORD="@Eduzkipp@2#2!"
+EMAIL_HOST_PASSWORD="#eduzkipp@2#2!"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

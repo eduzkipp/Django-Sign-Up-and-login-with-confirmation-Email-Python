@@ -13,7 +13,7 @@ from django.template import Context
 
 
 def index(request):
-    return render(request, 'user/index.html',{'title':'index'})
+    return render(request, 'index.html',{'title':'index'})
 
 
 def register(request):
@@ -23,7 +23,7 @@ def register(request):
             form.save()
             username=form.cleaned_data.get('username')
             email=form.cleaned_data.get('email')
-            htmly=get_template('user/Email.html')
+            htmly=get_template('Email.html')
             d={'username':username}
             subject, from_email,to='welcome','eduzkipp@gmail.com',email
             html_content=htmly.render(d)
@@ -37,11 +37,11 @@ def register(request):
 
     else:
         form=UserRegisterForm()
-    return render(request,'user/register.html',{'form':form,'title':'register here'})    
+    return render(request,'register.html',{'form':form,'title':'register here'})    
 
 
 # Create your views here.
-def login(request):
+def Login(request):
 
     if request.method=='POST':
         username=request.POST['username']
@@ -54,6 +54,6 @@ def login(request):
         else:
             messages.info(request,f'account does not exist pliz sign in')
     form=AuthenticationForm()
-    return render(request,'user/login.html',{'form':form,'title':'login in'})        
+    return render(request,'login.html',{'form':form,'title':'login in'})        
 
 
