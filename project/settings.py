@@ -131,7 +131,7 @@ EMAIL_HOST="smtp.gmail.com"
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 
-EMAIL_HOST="eduzkipp@gmail.com"
+EMAIL_HOST="kiplangatedwin91@gmail.com"
 EMAIL_HOST_PASSWORD="#eduzkipp@2#2!"
 
 # Default primary key field type

@@ -25,7 +25,7 @@ def register(request):
             email=form.cleaned_data.get('email')
             htmly=get_template('Email.html')
             d={'username':username}
-            subject, from_email,to='welcome','eduzkipp@gmail.com',email
+            subject, from_email,to='welcome','kiplangatedwin91@gmail.com',email
             html_content=htmly.render(d)
             msg=EmailMultiAlternatives(subject,html_content,from_email,[to])
             msg.attach_alternative(html_content,"text/html")
